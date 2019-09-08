@@ -1,0 +1,27 @@
+.So : mov R2, 0
+      mov R11, 1
+      mov R1, 0
+      mov R5, 0
+.case X :
+      mul R7, R11, R11
+      mul R6, R7, R11
+      mov R1, 0
+      cmp R5, 2
+      beq ret
+      add R11, R11 , 1
+      mov R1,0
+.case y :
+      add R2,R1 ,1
+      cmp R1, R11
+      beq .case X
+      add R1,R1,1
+.csae Z :
+      mul R3,R2,R2
+      mul R4,R3,R2
+      mul R10,R1,R1
+      mul R9,R10,R1
+      add R8,R4,R9
+      cmp R6,R8
+      add R2,R2,1
+      beq .case Y
+      b .case Z   
